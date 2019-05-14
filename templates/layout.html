@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.png') }}">
+    <meta charset="UTF-8">
+    <title>Texas</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #f50500;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+</style>
+
+<body bgcolor="#002868">
+
+<div class="navbar">
+  <a class="active" href="/"><i class="fa fa-fw fa-home"></i> Início</a>
+  <a href="curiosidades"><i class="fas fa-bullhorn"></i> Curiosidades</a>
+  <a href="localizacao"><i class="fas fa-globe-americas"></i> Localização</a>
+  <a href="desporto"><i class="fas fa-football-ball"></i> Desporto</a>
+  <a href="cultura"><i class="fa fa-group"></i> Cultura</a>
+  <a href="aeroespaco"><i class="fas fa-rocket"></i>Aerospaço</a>
+  <a href="gastronomia"><i class="fas fa-utensils"></i> Gastronomia</a>
+  <a href="musica"><i class="fas fa-volume-up"></i> Música</a>
+  <a href="geografia"><i class="fas fa-mountain"></i> Geografia</a>
+  <a href="economia"><i class="fa fa-fw fa-building"></i> Economia</a>
+  <a href="login"><i class="fa fa-fw fa-user"></i> Login</a>
+</div>
+
+
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+<div id="footer">
+    {% block footer %}
+    &copy; Copyright 2019 Diogo Fernandes
+    {% endblock %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<center>
+<h1 style="color:#FFFFFF;">Iniciar sessão:</h1>
+<form>
+    <label style="color:#FFFFFF;">Nome do Utilizador:</label>
+    <br>
+    <input type="text" name="login">
+    <br><br>
+    <label style="color:#FFFFFF;">Palavra-Passe:</label>
+    <br>
+    <input type="password" name="pass">
+    <br><br>
+    <input type="button" value="Iniciar Sessão"
+    onclick="validar(login.value, pass.value)">
+</form>
+<br>
+<script>
+    function validar(login, pass)
+    {
+        if (login=='Diogo' && pass=='123456')
+        {
+            location.href="ec"
+        }
+        else alert('Dados inválidos. Tente novamente.')
+    }
+
+</script>
+</center>
+{% endblock %}

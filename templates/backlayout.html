@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Escola Secundária de Maximinos</title>
+</head>
+<body bgcolor="black">
+<center>
+<table border="1" bgcolor="#002868">
+    <td><a href="/"><font color="red">Início</font></a></td>
+    <td><a href="geografia"><font color="red">Geografia</font></a></td>
+    <td><a href="clima"><font color="red">Clima</font></a></td>
+    <td><a href="p3"><font color="red">História</font></a></td>
+    <td><a href="p4"><font color="red">Demografia</font></a></td>
+    <td><a href="p5"><font color="red">Cultura</font></a></td>
+    <td><a href="p6"><font color="red">Educação</font></a></td>
+    <td><a href="p7"><font color="red">Infraestrutura</font></a></td>
+    <td><a href="login"><font color="red">Login</font></a></td>
+</table>
+
+</center>
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+<div id="footer">
+    {% block footer %}
+    &copy; Copyright 2019 Diogo Fernandes
+    {% endblock %}
+</div>
+
+</body>
+</html>
